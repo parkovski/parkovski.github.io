@@ -12,7 +12,7 @@ import { ThemeProvider } from "emotion-theming";
 import Header from "./header";
 import "./layout.css";
 
-import theme from './theme';
+import theme from 'style/theme';
 
 const Layout = ({ children }: { children: React.ReactElement[] }) => (
   <StaticQuery

@@ -38,6 +38,8 @@ module.exports = {
         root: "./src",
         aliases: {
           "~": "./components",
+          "images": "./images",
+          "style": "./style",
         },
       },
     },
