@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `parkovski`,
+    title: `Parker's Site`,
     description: `This is where my stuff is!`,
     author: `parkovski`,
   },
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `parkovski's site`,
+        name: `Parker's Site`,
         short_name: `parkovski`,
         start_url: `/`,
         background_color: `#663399`,
