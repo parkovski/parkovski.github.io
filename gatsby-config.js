@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Parker's Site`,
-        short_name: `parkovski`,
+        short_name: `parkovski.com`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -40,7 +40,28 @@ module.exports = {
           "~": "./components",
           "images": "./images",
           "style": "./style",
+          "styled": "./style/styled",
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src`,
       },
     },
   ],

@@ -1,11 +1,12 @@
-import { Link } from "gatsby";
-import styled from '@emotion/styled';
+import Link from "~/link";
+import styled from 'styled';
 
 const TitleLink = styled(Link)`
-  color: ${props => props.theme.colors.headerText};
+  color: ${props => props.theme.colors.white};
   text-decoration: none;
   &:hover {
-    color: ${props => props.theme.colors.linkHover};
+    color: ${props => props.theme.colors.yellow[2]};
+    text-decoration: underline;
   }
 `;
 
@@ -16,7 +17,7 @@ interface HeaderProps {
 const Header = ({ siteTitle }: HeaderProps) => (
   <header
     css={theme => ({
-      background: theme.colors.header,
+      background: theme.colors.teal[9],
       marginBottom: `1.45rem`,
     })}
   >
@@ -33,12 +34,12 @@ const Header = ({ siteTitle }: HeaderProps) => (
           padding: `.5rem 0`,
           float: 'right',
         }}>
-          <TitleLink to="/">Page 1</TitleLink>&nbsp;
-          <TitleLink to="/page-2">Page 2</TitleLink>&nbsp;
+          <TitleLink href="/">Home</TitleLink>&nbsp;
+          <TitleLink href="/portfolio">Portfolio</TitleLink>&nbsp;
       </div>
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          href="/"
           style={{
             color: `white`,
             textDecoration: `none`,

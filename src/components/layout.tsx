@@ -10,7 +10,9 @@ import { StaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "emotion-theming";
 
 import Header from "./header";
-import "./layout.css";
+import "style/base.css";
+
+import Link from "~/link";
 
 import theme from 'style/theme';
 
@@ -40,7 +42,7 @@ const Layout = ({ children }: { children: React.ReactElement[] }) => (
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <Link href="https://www.gatsbyjs.org">Gatsby</Link>
           </footer>
         </div>
       </ThemeProvider>
