@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "jsxImportSource": "theme-ui",
+    "declaration": true,
+    "outDir": "lib",
+    "isolatedModules": true,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"],
+      "~px/*": ["src/pages/*"],
+      "~cx/*": ["src/components/*"],
+      "~ix/*": ["src/images/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
