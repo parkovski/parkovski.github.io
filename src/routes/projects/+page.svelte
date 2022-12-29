@@ -2,12 +2,14 @@
   export let data;
   let selectedTag = null;
   let filteredProjects = data.projects;
-  const tags = data.projects
-    .flatMap(x => x.tags)
-    .reduce((set, tag) => {
-      set.add(tag);
-      return set;
-    }, new Set);
+  const tags = [
+    ...data.projects
+      .flatMap(x => x.tags)
+      .reduce((set, tag) => {
+        set.add(tag);
+        return set;
+      }, new Set)
+    ].sort();
 
   function selectTag(e) {
     selectedTag = e.target.innerText;
@@ -26,14 +28,18 @@
   ul {
     list-style-type: none;
     padding: 0 2px;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
   }
 
   details {
-    border-bottom: 1px solid var(--color-text);
     margin-bottom: 2px;
     line-height: 150%;
   }
-  details[open] {
+  li:not(:last-child) > details {
+    border-bottom: 1px solid var(--color-border);
+  }
+  li:not(:last-child) > details[open] {
     border-bottom: 1px solid var(--color-text);
   }
   summary {
@@ -61,7 +67,6 @@
 
   div.tags > span {
     line-height: 150%;
-    color: initial;
     cursor: pointer;
     font-size: 85%;
     background-color: var(--color-bg-3);
@@ -97,7 +102,7 @@
   <div style="display: flex">
     <div style="flex: 0 1 auto">Filter projects:&nbsp;</div>
     <div class="tags" style="flex: 1">
-      {#each [...tags] as tag}
+      {#each tags as tag}
         <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
       {/each}
     </div>
@@ -109,12 +114,15 @@
       <details>
         <summary>
           <span class="right">
+            {#if proj.images}
+              <span style="color: var(--color-text-2)">[pics] </span>
+            {/if}
             [<a href="{proj.url}" target="_blank" rel="noreferrer">view</a>]
           </span>
           <span class="name">{proj.name}</span>
         </summary>
         <div class="tags">
-          {#each proj.tags as tag}
+          {#each proj.tags.sort() as tag}
             <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
           {/each}
         </div>

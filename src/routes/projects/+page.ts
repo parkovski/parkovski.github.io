@@ -31,9 +31,6 @@ const projects: ProjectInfo[] = [
     url: 'https://github.com/parkovski/wsudo',
     description: 'Proof of concept sudo for Windows',
     tags: ['Windows', 'C++'],
-    images: [
-      'https://raw.githubusercontent.com/parkovski/wsudo/assets/demo.mp4',
-    ],
   },
   {
     name: 'wscoro',

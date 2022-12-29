@@ -25,7 +25,8 @@
 
   #content {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 3px;
+    border-bottom: 1px solid var(--color-border);
   }
 
   footer {
