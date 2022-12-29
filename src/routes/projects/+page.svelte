@@ -117,6 +117,11 @@
             {#if proj.images}
               <span style="color: var(--color-text-2)">[pics] </span>
             {/if}
+            {#if proj.links}
+              {#each proj.links as link}
+                [<a href="{link.url}" target="_blank" rel="noreferrer">{link.text}</a>]{' '}
+              {/each}
+            {/if}
             [<a href="{proj.url}" target="_blank" rel="noreferrer">view</a>]
           </span>
           <span class="name">{proj.name}</span>

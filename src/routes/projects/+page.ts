@@ -1,9 +1,15 @@
+interface Link {
+  text: string;
+  url: string;
+}
+
 interface ProjectInfo {
   name: string;
   url: string;
   description: string;
   tags: string[];
   images?: string[];
+  links?: Link[];
 }
 
 const projects: ProjectInfo[] = [
@@ -31,6 +37,12 @@ const projects: ProjectInfo[] = [
     url: 'https://github.com/parkovski/wsudo',
     description: 'Proof of concept sudo for Windows',
     tags: ['Windows', 'C++'],
+    links: [
+      {
+        text: 'demo',
+        url: 'https://raw.githubusercontent.com/parkovski/wsudo/assets/demo.mp4',
+      }
+    ]
   },
   {
     name: 'wscoro',
@@ -43,6 +55,12 @@ const projects: ProjectInfo[] = [
     url: 'https://github.com/parkovski/htmlgames',
     description: 'Games contained in a single HTML file',
     tags: ['Game', 'Web', 'Javascript'],
+    links: [
+      {
+        text: 'play',
+        url: 'https://www.parkovski.com/htmlgames',
+      }
+    ]
   },
   {
     name: 'Tanks',
