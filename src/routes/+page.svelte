@@ -1,2 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Parker's Site</h1>
+<p>Welcome to Parker's website.</p>
+<p>There's not much here right now, but you can <a href="/projects">check out
+    my projects</a>.</p>

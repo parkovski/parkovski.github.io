@@ -1,0 +1,23 @@
+* {
+  --color-text: #000;
+  --color-text-inv: #fff;
+  --color-link: #28e;
+  --color-link-inv: #fff;
+  --color-border: #aaa;
+  --color-bg-2: #eee;
+  --color-bg-3: #ddd;
+  --color-bg-inv: #555;
+}
+
+h1 {
+  border-bottom: 1px solid var(--color-link);
+}
+
+a {
+  color: var(--color-link);
+}
+a:hover, a:active {
+  text-decoration: none;
+  background-color: var(--color-link);
+  color: var(--color-link-inv);
+}
