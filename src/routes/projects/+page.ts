@@ -14,6 +14,18 @@ interface ProjectInfo {
 
 const projects: ProjectInfo[] = [
   {
+    name: 'YinYang',
+    url: 'https://github.com/parkovski/yinyang',
+    description: 'Utility to query and respond to system light/dark theme changes',
+    tags: ['C', 'OS Integration'],
+    links: [
+      {
+        text: 'demo',
+        url: 'https://raw.githubusercontent.com/parkovski/yinyang/assets/yinyang.mp4',
+      }
+    ]
+  },
+  {
     name: 'SciFighters',
     url: 'https://github.com/parkovski/scifi',
     description: 'Smash-style phone game with Unity',
@@ -36,7 +48,7 @@ const projects: ProjectInfo[] = [
     name: 'wsudo',
     url: 'https://github.com/parkovski/wsudo',
     description: 'Proof of concept sudo for Windows',
-    tags: ['Windows', 'C++'],
+    tags: ['Windows', 'C++', 'OS Integration'],
     links: [
       {
         text: 'demo',
