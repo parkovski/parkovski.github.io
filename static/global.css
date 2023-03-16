@@ -3,7 +3,7 @@
     --color-text: #000;
     --color-text-2: #888;
     --color-text-inv: #fff;
-    --color-link: #28e;
+    --color-link: #033e21; /* #28e */
     --color-link-inv: #fff;
     --color-border: #ccc;
     --color-bg: #fff;
@@ -18,7 +18,7 @@
     --color-text: #fff;
     --color-text-2: #aaa;
     --color-text-inv: #000;
-    --color-link: #8cf;
+    --color-link: #3ba872; /* #8cf */
     --color-link-inv: #000;
     --color-border: #666;
     --color-bg: #111;
