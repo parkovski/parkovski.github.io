@@ -9,7 +9,6 @@
   nav {
     font-size: 1.25em;
     padding: 8px 4px;
-    /* border-bottom: 1px solid var(--color-border); */
     background-color: var(--color-bg-2);
   }
   #menu {
@@ -27,7 +26,7 @@
     text-decoration: none;
   }
   nav a:hover, nav a:active {
-    color: var(--color-link);
+    color: var(--color-hl);
   }
 
   #content {
@@ -46,7 +45,6 @@
     bottom: 0;
     text-align: center;
     padding: .25rem 0;
-    /* border-top: 1px solid var(--color-link); */
   }
 </style>
 <div id="page">

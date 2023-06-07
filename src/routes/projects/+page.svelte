@@ -33,24 +33,17 @@
   }
 
   details {
-    margin-bottom: 2px;
     line-height: 150%;
   }
   li:not(:last-child) > details {
     border-bottom: 1px solid var(--color-border);
-  }
-  li:not(:last-child) > details[open] {
-    border-bottom: 1px solid var(--color-text);
+    margin-bottom: 0.25em;
   }
   summary {
     cursor: pointer;
   }
   summary:hover {
-    background-color: var(--color-bg-2);
-  }
-
-  details[open] span.name {
-    text-decoration: underline;
+    background-color: var(--color-bg-3);
   }
 
   .images {
@@ -92,8 +85,8 @@
 </div>
 <div id="wrap-body">
   <p>
-    Not all of my projects are listed here - these are selected highlights. More
-    is available on
+    These are a highlighted selection of projects I've worked on over the
+    years. More are available on
     <a href="https://github.com/parkovski" target="_blank" rel="noreferrer">my GitHub</a>.
   </p>
   {#if selectedTag}
