@@ -87,59 +87,63 @@
   }
 </style>
 
-<h1>Projects</h1>
-<p>
-  Not all of my projects are listed here - these are selected highlights. More
-  is available on
-  <a href="https://github.com/parkovski" target="_blank" rel="noreferrer">my GitHub</a>.
-</p>
-{#if selectedTag}
-  <div class="tags">
-    Filtering by:
-    <span on:click={clearTag} on:keypress={clearTag}>{selectedTag}<span>x</span></span>
-  </div>
-{:else}
-  <div style="display: flex">
-    <div style="flex: 0 1 auto">Filter projects:&nbsp;</div>
-    <div class="tags" style="flex: 1">
-      {#each tags as tag}
-        <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
-      {/each}
+<div id="wrap-header">
+  <h1>Projects</h1>
+</div>
+<div id="wrap-body">
+  <p>
+    Not all of my projects are listed here - these are selected highlights. More
+    is available on
+    <a href="https://github.com/parkovski" target="_blank" rel="noreferrer">my GitHub</a>.
+  </p>
+  {#if selectedTag}
+    <div class="tags">
+      Filtering by:
+      <span on:click={clearTag} on:keypress={clearTag}>{selectedTag}<span>x</span></span>
     </div>
-  </div>
-{/if}
-<ul>
-  {#each filteredProjects as proj}
-    <li>
-      <details>
-        <summary>
-          <span class="right">
-            {#if proj.images}
-              <span style="color: var(--color-text-2)">[pics] </span>
-            {/if}
-            {#if proj.links}
-              {#each proj.links as link}
-                [<a href="{link.url}" target="_blank" rel="noreferrer">{link.text}</a>]{' '}
-              {/each}
-            {/if}
-            [<a href="{proj.url}" target="_blank" rel="noreferrer">view</a>]
-          </span>
-          <span class="name">{proj.name}</span>
-        </summary>
-        <div class="tags">
-          {#each proj.tags.sort() as tag}
-            <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
-          {/each}
-        </div>
-        {proj.description}
-        {#if proj.images}
-          <div class="images">
-          {#each proj.images as img}
-            <img src="{img}" alt="Screenshot">
-          {/each}
+  {:else}
+    <div style="display: flex">
+      <div style="flex: 0 1 auto">Filter:&nbsp;</div>
+      <div class="tags" style="flex: 1">
+        {#each tags as tag}
+          <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
+        {/each}
+      </div>
+    </div>
+  {/if}
+  <ul>
+    {#each filteredProjects as proj}
+      <li>
+        <details>
+          <summary>
+            <span class="right">
+              {#if proj.images}
+                <span style="color: var(--color-text-2)">pics </span>
+              {/if}
+              {#if proj.links}
+                {#each proj.links as link}
+                  <a href="{link.url}" target="_blank" rel="noreferrer">{link.text}</a>{' '}
+                {/each}
+              {/if}
+              <a href="{proj.url}" target="_blank" rel="noreferrer">source</a>
+            </span>
+            <span class="name">{proj.name}</span>
+          </summary>
+          <div class="tags">
+            {#each proj.tags.sort() as tag}
+              <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
+            {/each}
           </div>
-        {/if}
-      </details>
-    </li>
-  {/each}
-</ul>
+          {proj.description}
+          {#if proj.images}
+            <div class="images">
+            {#each proj.images as img}
+              <img src="{img}" alt="Screenshot">
+            {/each}
+            </div>
+          {/if}
+        </details>
+      </li>
+    {/each}
+  </ul>
+</div>

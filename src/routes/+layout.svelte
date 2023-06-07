@@ -2,13 +2,15 @@
   #page {
     position: relative;
     /* Subtract footer height */
-    min-height: calc(100vh - 1.5rem);
-    padding-bottom: 1.5rem;
+    min-height: calc(100vh - 1.25rem);
+    padding-bottom: 1.25rem;
   }
 
   nav {
-    padding: 4px;
-    border-bottom: 1px solid var(--color-border);
+    font-size: 1.25em;
+    padding: 8px 4px;
+    /* border-bottom: 1px solid var(--color-border); */
+    background-color: var(--color-bg-2);
   }
   #menu {
     display: inline;
@@ -18,38 +20,46 @@
   #menu>li {
     display: inline;
     overflow: hidden;
+    margin: 0 8px;
   }
   nav a {
+    color: var(--color-text);
     text-decoration: none;
+  }
+  nav a:hover, nav a:active {
+    color: var(--color-link);
   }
 
   #content {
     max-width: 960px;
-    margin: 0 auto 3px;
-    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg-2);
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 4px 0;
   }
 
   footer {
+    font-size: 75%;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
     padding: .25rem 0;
-    border-top: 1px solid var(--color-link);
+    /* border-top: 1px solid var(--color-link); */
   }
 </style>
 <div id="page">
   <nav>
     <ul id="menu">
-      <li><a href="/">[home]</a></li>
-      <li><a href="/writing">[writing]</a></li>
-      <li><a href="/projects">[projects]</a></li>
-      <li><a href="/resume">[resume]</a></li>
-      <li><a href="/about">[about]</a></li>
+      <li><a href="/">home</a></li>
+      <li><a href="/projects">projects</a></li>
+      <li><a href="/writing">writing</a></li>
+      <li><a href="/about">about</a></li>
     </ul>
   </nav>
   <div id="content">
+    <slot name="header"></slot>
     <slot></slot>
   </div>
   <footer>Copyright &copy; 2022 - {new Date().getFullYear()} Parker Snell</footer>
