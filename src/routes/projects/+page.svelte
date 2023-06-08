@@ -80,6 +80,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>parkovski - projects</title>
+</svelte:head>
+
 <div id="wrap-header">
   <h1>Projects</h1>
 </div>

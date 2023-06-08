@@ -34,7 +34,7 @@
     background-color: var(--color-bg-2);
     border-radius: 5px;
     margin: 1rem auto;
-    padding: 4px 0;
+    padding: .5rem 0 1rem;
   }
 
   footer {

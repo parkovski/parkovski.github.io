@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>parkovski - about</title>
+</svelte:head>
+
 <div id="wrap-header">
   <h1>About</h1>
 </div>

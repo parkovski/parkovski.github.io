@@ -1,12 +1,23 @@
 <style>
   img {
-    border: 1px solid #555;
     border-radius: 5px;
     padding: 2px;
-    background-color: #444;
     margin-left: 4px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+  }
+  @media (prefers-color-scheme: dark) {
+    img {
+      background-color: #444;
+      border: 1px solid #555;
+    }
   }
 </style>
+
+<svelte:head>
+  <title>parkovski - home</title>
+</svelte:head>
+
 <div id="wrap-header">
   <h1>Parker Snell</h1>
 </div>
