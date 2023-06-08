@@ -22,7 +22,8 @@
   <h1>Parker Snell</h1>
 </div>
 <div id="wrap-body">
-  <img style="float:right; max-width:400px" src="/saguaro.jpg">
+  <img style="float:right; max-width:400px" src="/saguaro.jpg"
+    alt="Saguaro flowers">
   <p>Welcome to Parker's website.</p>
   <p>
     I started writing software in 2002 with a small hobbyist language called
