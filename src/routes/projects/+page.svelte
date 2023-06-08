@@ -28,12 +28,17 @@
   ul {
     list-style-type: none;
     padding: 0 2px;
-    max-width: 800px;
+    max-width: 960px;
     margin: 1.5rem auto 0;
   }
 
   details {
     line-height: 150%;
+    border-radius: 3px;
+    padding: 2px 4px;
+  }
+  details[open], details:hover {
+    background-color: var(--color-bg-3);
   }
   li:not(:last-child) > details {
     border-bottom: 1px solid var(--color-border);
@@ -42,12 +47,9 @@
   summary {
     cursor: pointer;
   }
-  summary:hover {
-    background-color: var(--color-bg-3);
-  }
 
   .images {
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
   }
 
   details img {
@@ -65,6 +67,9 @@
     background-color: var(--color-bg-3);
     padding: 0 2px;
     border-radius: 3px;
+  }
+  details div.tags > span {
+    background-color: var(--color-border);
   }
   div.tags > span:hover {
     background-color: var(--color-bg-inv);
