@@ -30,7 +30,7 @@
   }
 
   #content {
-    max-width: 960px;
+    max-width: 1200px;
     background-color: var(--color-bg-2);
     border-radius: 5px;
     margin: 1rem auto;
