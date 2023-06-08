@@ -50,7 +50,12 @@
 <div id="page">
   <nav>
     <ul id="menu">
-      <li><a href="/">home</a></li>
+      <li>
+        <a href="/">
+          <img src="/favicon.png" alt="home"
+            style="height: 1.5em; vertical-align: text-top">
+        </a>
+      </li>
       <li><a href="/projects">projects</a></li>
       <li><a href="/writing">writing</a></li>
       <li><a href="/about">about</a></li>
