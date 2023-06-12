@@ -1,3 +1,10 @@
+<script>
+  function closeMenu() {
+    document.getElementById('menu-check').checked = false;
+    return true;
+  }
+</script>
+
 <style>
   #menu-check {
     display: none;
@@ -95,12 +102,12 @@
   <label id="menu-button" for="menu-check">
     <span></span>
   </label>
-  <ul id="menu">
-    <li class="nophone">
-      <a href="/"><img src="/favicon.png" alt="Home" class="logo"></a>
-    </li>
-    <li class="phone">
-      <a href="/"><img src="/favicon.png" alt="Logo" class="logo"> home</a>
+  <ul id="menu" on:click={closeMenu}>
+    <li>
+      <a href="/">
+        <img src="/favicon.png" alt="Logo" class="logo">
+        <span class="phone"> home</span>
+      </a>
     </li>
     <li><a href="/projects">projects</a></li>
     <li><a href="/writing">writing</a></li>
