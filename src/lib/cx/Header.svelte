@@ -3,6 +3,12 @@
     document.getElementById('menu-check').checked = false;
     return true;
   }
+
+  function menuKeyDown(e) {
+    if (e.keyCode === 13) {
+      closeMenu();
+    }
+  }
 </script>
 
 <style>
@@ -102,7 +108,7 @@
   <label id="menu-button" for="menu-check">
     <span></span>
   </label>
-  <ul id="menu" on:click={closeMenu}>
+  <ul id="menu" on:click={closeMenu} on:keydown={menuKeyDown}>
     <li>
       <a href="/">
         <img src="/favicon.png" alt="Logo" class="logo">
