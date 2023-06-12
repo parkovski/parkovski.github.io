@@ -1,9 +1,30 @@
+<script>
+  import '$lib/styles/global.css';
+
+  function closeMenu() {
+    document.getElementsByTagName('header')[0].style.display = 'none';
+    document.getElementById('open-menu').style.display = 'initial';
+  }
+</script>
+
 <style>
   #page {
     position: relative;
-    /* Subtract footer height */
-    min-height: calc(100vh - 1.25rem);
+    min-height: 100vh;
     padding-bottom: 1.25rem;
+  }
+
+  @keyframes open-menu {
+    from { margin-top: -100%; }
+    to { margin-top: 0; }
+  }
+
+  .open-menu {
+    animation: open-menu 0.5s forwards;
+  }
+
+  .close-menu {
+    animation: open-menu 0.5s backwards;
   }
 
   nav {
@@ -11,15 +32,25 @@
     padding: 8px 4px;
     background-color: var(--color-bg-2);
   }
+
   #menu {
-    display: inline;
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    padding-left: 0;
+  }
+  @media (max-width: 640px) {
+    header {
+      display: none;
+    }
+    #menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
   #menu>li {
-    display: inline;
-    overflow: hidden;
-    margin: 0 8px;
+    margin: 0 4px;
   }
   nav a {
     color: var(--color-text);
@@ -36,8 +67,14 @@
     margin: 1rem auto;
     padding: .5rem 0 1rem;
   }
+  @media (max-width: 640px) {
+    #content {
+      margin-top: 0;
+    }
+  }
 
   footer {
+    line-height: 1;
     font-size: 75%;
     position: absolute;
     left: 0;
@@ -47,23 +84,26 @@
     padding: .25rem 0;
   }
 </style>
+
 <div id="page">
-  <nav>
-    <ul id="menu">
-      <li>
-        <a href="/">
-          <img src="/favicon.png" alt="home"
-            style="height: 1.5em; vertical-align: text-top">
-        </a>
-      </li>
-      <li><a href="/projects">projects</a></li>
-      <li><a href="/writing">writing</a></li>
-      <li><a href="/about">about</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <ul id="menu">
+        <li class="nophone">
+          <a href="/"><img src="/favicon.png" alt="home" class="logo"></a>
+        </li>
+        <li class="phone" style="margin-top: 8px">
+          <img src="/favicon.png" alt="home" class="logo" on:click={closeMenu}>
+        </li>
+        <li class="phone"><a href="/">home</a></li>
+        <li><a href="/projects">projects</a></li>
+        <li><a href="/writing">writing</a></li>
+        <li><a href="/about">about</a></li>
+      </ul>
+    </nav>
+  </header>
   <div id="content">
-    <slot name="header"></slot>
-    <slot></slot>
+    <slot/>
   </div>
   <footer>Copyright &copy; 2022 - {new Date().getFullYear()} Parker Snell</footer>
 </div>

@@ -1,3 +1,5 @@
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+
 /* default light mode */
 :root {
   --color-text: #111;
@@ -36,9 +38,26 @@ body {
   color: var(--color-text);
 }
 
+.phone {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .phone {
+    display: initial;
+  }
+  .nophone {
+    display: none;
+  }
+}
+
 #wrap-header {
   border-bottom: 1px solid var(--color-hl);
-  /*margin-top: 0.5rem;*/
+}
+
+.logo {
+  height: 1.5rem;
+  vertical-align: text-top;
 }
 
 #wrap-header h1 {

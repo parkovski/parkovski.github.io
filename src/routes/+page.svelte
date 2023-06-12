@@ -1,15 +1,32 @@
+<script>
+  function openMenu() {
+    document.getElementsByTagName('header')[0].style.display = 'initial';
+    document.getElementById('open-menu').style.display = 'none';
+  }
+</script>
+
 <style>
-  img {
+  #saguaro {
     border-radius: 5px;
     padding: 2px;
-    margin-left: 4px;
+    margin: 8px 0 0 0;
     background-color: #ddd;
     border: 1px solid #bbb;
+    max-width: calc(100vw - 16px);
   }
+
   @media (prefers-color-scheme: dark) {
-    img {
+    #saguaro {
       background-color: #444;
       border: 1px solid #555;
+    }
+  }
+
+  @media (min-width: 640px) {
+    #saguaro {
+      float: right;
+      max-width: 400px;
+      margin: 0 0 0 8px;
     }
   }
 </style>
@@ -19,11 +36,14 @@
 </svelte:head>
 
 <div id="wrap-header">
-  <h1>Parker Snell</h1>
+  <h1>
+    <img src="/favicon.png" class="logo phone" id="open-menu"
+      style="vertical-align: baseline" on:click={openMenu}>
+    Parker Snell
+  </h1>
 </div>
 <div id="wrap-body">
-  <img style="float:right; max-width:400px" src="/saguaro.jpg"
-    alt="Saguaro flowers">
+  <img id="saguaro" src="/saguaro.jpg" alt="Saguaro flowers">
   <p>Welcome to Parker's website.</p>
   <p>
     I started writing software in 2002 with a small hobbyist language called
