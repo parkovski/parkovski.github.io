@@ -1,10 +1,12 @@
+<script>
+  import Title from '$lib/cx/Title.svelte';
+</script>
+
 <svelte:head>
   <title>parkovski - about</title>
 </svelte:head>
 
-<div id="wrap-header">
-  <h1>About</h1>
-</div>
+<Title>About</Title>
 <div id="wrap-body">
   <p>It's a-me, Mario!</p>
 </div>

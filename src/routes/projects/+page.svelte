@@ -1,5 +1,8 @@
 <script>
+  import Title from '$lib/cx/Title.svelte';
+
   export let data;
+
   let selectedTag = null;
   let filteredProjects = data.projects;
   const tags = [
@@ -89,9 +92,7 @@
   <title>parkovski - projects</title>
 </svelte:head>
 
-<div id="wrap-header">
-  <h1>Projects</h1>
-</div>
+<Title>Projects</Title>
 <div id="wrap-body">
   <p>
     These are a highlighted selection of projects I've worked on over the
