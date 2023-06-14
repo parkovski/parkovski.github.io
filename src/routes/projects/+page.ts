@@ -14,6 +14,18 @@ interface ProjectInfo {
 
 const projects: ProjectInfo[] = [
   {
+    name: 'Unaccessible Film Website',
+    url: 'https://github.com/parkovski/unaccessible',
+    description: 'Website for Hayden Snell\'s documentary, Unaccessible',
+    tags: ['Web'],
+    links: [
+      {
+        text: 'visit',
+        url: 'https://www.unaccessiblefilm.com',
+      }
+    ],
+  },
+  {
     name: 'YinYang',
     url: 'https://github.com/parkovski/yinyang',
     description: 'Utility to query and respond to system light/dark theme changes',
