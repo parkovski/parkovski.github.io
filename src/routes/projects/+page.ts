@@ -14,6 +14,18 @@ interface ProjectInfo {
 
 const projects: ProjectInfo[] = [
   {
+    name: 'Tu Song Website',
+    url: 'https://github.com/parkovski/tusong',
+    description: 'Website for Tu Song band',
+    tags: ['Web'],
+    links: [
+      {
+        text: 'visit',
+        url: 'https://www.tusong.band',
+      }
+    ],
+  },
+  {
     name: 'Unaccessible Film Website',
     url: 'https://github.com/parkovski/unaccessible',
     description: 'Website for Hayden Snell\'s documentary, Unaccessible',
