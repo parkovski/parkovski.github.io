@@ -63,6 +63,11 @@
     float: right;
   }
 
+  .tag-container {
+    max-width: 960px;
+    margin: 0 auto 0;
+  }
+
   div.tags > span {
     line-height: 150%;
     cursor: pointer;
@@ -100,12 +105,12 @@
     <a href="https://github.com/parkovski" target="_blank" rel="noreferrer">my GitHub</a>.
   </p>
   {#if selectedTag}
-    <div class="tags">
+    <div class="tags tag-container">
       Filtering by:
       <span on:click={clearTag} on:keypress={clearTag}>{selectedTag}<span>x</span></span>
     </div>
   {:else}
-    <div style="display: flex">
+    <div class="tag-container" style="display: flex">
       <div style="flex: 0 1 auto">Filter:&nbsp;</div>
       <div class="tags" style="flex: 1">
         {#each tags as tag}
