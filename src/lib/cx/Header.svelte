@@ -16,7 +16,7 @@
     display: none;
   }
   #menu-check:checked + #menu-button > span {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(4px, 4px);
   }
   #menu-check:checked + #menu-button > span::before {
     top: 0;
@@ -32,7 +32,7 @@
 
   #menu-button {
     position: fixed;
-    top: 28px;
+    top: 20px;
     left: 8px;
     width: 20px;
     height: 20px;
@@ -52,11 +52,11 @@
   }
   #menu-button > span::before {
     content: '';
-    top: -8px;
+    top: 8px;
   }
   #menu-button > span::after {
     content: '';
-    top: 8px;
+    top: 16px;
   }
 
   #menu {
