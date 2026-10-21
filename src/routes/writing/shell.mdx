@@ -1,0 +1,58 @@
+---
+title: Shell Utilities
+---
+
+# Shell Utilities
+
+I've written a bunch of small utilities that make my life in the terminal a
+little easier. Since I'm on Windows, I'm mainly using PowerShell, but I've also
+ported many of these to zsh.
+
+## with
+In Unix shells, you can write things like this:
+
+```bash
+CC=gcc CXX=g++ cmake --preset=default
+```
+
+PowerShell lacks this feature, so I wrote a small script that works like this:
+
+```powershell
+with CC=gcc,CXX=g++ cmake --preset=default
+```
+
+## in
+This one just saves me a couple keystrokes from having to cd somewhere and then
+cd back:
+
+```powershell
+in build/bin ./myprogram
+```
+
+It runs the program in the specified directory without switching to it
+permanently.
+
+## swapd
+This is useful if you're working in two directories at once. It swaps your
+current directory with the top level of the `pushd` stack. No arguments.
+
+## glob
+PowerShell doesn't glob with native programs, which sometimes means a lot of
+repetition if I want to edit multiple files in a folder. With this program, I
+can now do:
+
+```powershell
+nvim $(glob src/*.cpp)
+```
+
+## up
+This just saves a few keystrokes. It just goes up however many levels you give
+it:
+
+```powershell
+up 3 # Equivalent to cd ../../..
+```
+
+## syserr
+This one runs on Windows, Linux, and other Unices (untested). It gives you a
+description of a system error code. Useful for debugging.
