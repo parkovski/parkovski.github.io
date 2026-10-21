@@ -9,12 +9,14 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"sitepub": "vite build && node ./gh-pages.js"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^8.0.0",
+		"@sveltejs/adapter-static": "^4.0.0",
 		"@sveltejs/kit": "^3.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"gh-pages": "^6.3.0",
 		"mdsvex": "^0.12.7",
 		"modern-normalize": "^3.0.1",
 		"svelte": "^5.57.1",

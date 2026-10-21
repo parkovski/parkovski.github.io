@@ -9,7 +9,6 @@
 <Title>Writing</Title>
 <div id="wrap-body">
   <p>
-    I've been writing a lot lately, but nothing is available here yet. Check
-    back soon.
+    <a href="/writing/shell">Aw yeah dawg check out this jiggity shiznit.</a>
   </p>
 </div>
