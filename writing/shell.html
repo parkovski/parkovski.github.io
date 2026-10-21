@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="color-scheme" content="dark light">
+		<link href="../_app/immutable/entry/start.CVAPLPdG.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/payload.DSmR2FwN.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CRzLMJPS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DjJBVMVC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B304ciQ0.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/YFmj91jh.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.1XQoeDIh.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.CjWQMnDa.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/6.DIwQ5oP4.js" rel="modulepreload">
+		<!--1k78aqt--><!----><title>Shell Utilities</title>
+		<link href="../_app/immutable/assets/0.mfyJgsM5.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/6.Bbn4S3iu.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!--[0--><!--[--><div id="page" class="svelte-12qhfyh"><header><input id="menu-check" type="checkbox" class="svelte-h4mglc"/> <label id="menu-button" for="menu-check" class="svelte-h4mglc"><span class="svelte-h4mglc"></span></label> <ul id="menu" class="svelte-h4mglc"><li class="svelte-h4mglc"><a href="/" class="svelte-h4mglc"><img src="/favicon.png" alt="Logo" class="logo"/> <span class="phone">home</span></a></li> <li class="svelte-h4mglc"><a href="/projects" class="svelte-h4mglc">projects</a></li> <li class="svelte-h4mglc"><a href="/writing" class="svelte-h4mglc">writing</a></li> <li class="svelte-h4mglc"><a href="/about" class="svelte-h4mglc">about</a></li></ul></header><!----> <main class="svelte-12qhfyh"><!--[--><!--[-1--><!--[--><article class="svelte-1k78aqt"><!--[--><h1>Shell Utilities</h1> <p>I’ve written a bunch of small utilities that make my life in the terminal a
+little easier. Since I’m on Windows, I’m mainly using PowerShell, but I’ve also
+ported many of these to zsh.</p> <h2>with</h2> <p>In Unix shells, you can write things like this:</p> <pre class="language-bash"><!----><code class="language-bash"><span class="token assign-left variable">CC</span><span class="token operator">=</span>gcc <span class="token assign-left variable">CXX</span><span class="token operator">=</span>g++ cmake <span class="token parameter variable">--preset</span><span class="token operator">=</span>default</code><!----></pre> <p>PowerShell lacks this feature, so I wrote a small script that works like this:</p> <pre class="language-powershell"><!----><code class="language-powershell">with CC=gcc<span class="token punctuation">,</span>CXX=g+<span class="token operator">+</span> cmake <span class="token operator">--</span>preset=default</code><!----></pre> <h2>in</h2> <p>This one just saves me a couple keystrokes from having to cd somewhere and then
+cd back:</p> <pre class="language-powershell"><!----><code class="language-powershell">in build/bin <span class="token punctuation">.</span><span class="token operator">/</span>myprogram</code><!----></pre> <p>It runs the program in the specified directory without switching to it
+permanently.</p> <h2>swapd</h2> <p>This is useful if you’re working in two directories at once. It swaps your
+current directory with the top level of the <code>pushd</code> stack. No arguments.</p> <h2>glob</h2> <p>PowerShell doesn’t glob with native programs, which sometimes means a lot of
+repetition if I want to edit multiple files in a folder. With this program, I
+can now do:</p> <pre class="language-powershell"><!----><code class="language-powershell">nvim $<span class="token punctuation">(</span>glob src/<span class="token operator">*</span><span class="token punctuation">.</span><span class="token function">cpp</span><span class="token punctuation">)</span></code><!----></pre> <h2>up</h2> <p>This just saves a few keystrokes. It just goes up however many levels you give
+it:</p> <pre class="language-powershell"><!----><code class="language-powershell">up 3 <span class="token comment"># Equivalent to cd ../../..</span></code><!----></pre> <h2>syserr</h2> <p>This one runs on Windows, Linux, and other Unices (untested). It gives you a
+description of a system error code. Useful for debugging.</p><!--]--></article><!--]--><!--]--><!--]--><!----></main> <footer class="svelte-cz7ay2">Copyright © 2022 - 2026 Parker Snell</footer><!----></div><!--]--><!--]--><!--]--><!----> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1ydk6ig = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						version: "1792618097100"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					import("../_app/immutable/entry/start.CVAPLPdG.js").then(async (kit) => {
+						kit.init(__sveltekit_1ydk6ig);
+						const app = await import("../_app/immutable/entry/app.1XQoeDIh.js");
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
