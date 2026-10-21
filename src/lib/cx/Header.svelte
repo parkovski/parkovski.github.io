@@ -108,7 +108,7 @@
   <label id="menu-button" for="menu-check">
     <span></span>
   </label>
-  <ul id="menu" on:click={closeMenu} on:keydown={menuKeyDown}>
+  <ul id="menu" onclick={closeMenu} onkeydown={menuKeyDown}>
     <li>
       <a href="/">
         <img src="/favicon.png" alt="Logo" class="logo">

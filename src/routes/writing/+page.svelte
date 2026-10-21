@@ -1,5 +1,5 @@
 <script>
-  import Title from '$lib/cx/Title.svelte';
+  import Title from '#lib/cx/Title.svelte';
 </script>
 
 <svelte:head>

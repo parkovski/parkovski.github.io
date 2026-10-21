@@ -1,3 +1,8 @@
+<script>
+  /** @type {{children?: import('svelte').Snippet}} */
+  let { children } = $props();
+</script>
+
 <style>
   h1 {
     margin: 0 0 4px;
@@ -16,5 +21,5 @@
 </style>
 
 <div id="wrap-header">
-  <h1><slot/></h1>
+  <h1>{@render children?.()}</h1>
 </div>

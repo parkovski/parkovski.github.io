@@ -1,28 +1,34 @@
 <script>
-  import Title from '$lib/cx/Title.svelte';
+  import Title from '#lib/cx/Title.svelte';
 
-  export let data;
+  /** @type {{data: any}} */
+  let { data } = $props();
 
-  let selectedTag = null;
-  let filteredProjects = data.projects;
+  let selectedTag = $state(null);
+  let filteredProjects =
+    $state(() => {
+      if (selectedTag) {
+        return data.projects.filter(p => ~p.tags.indexOf(selectedTag));
+      } else {
+        return data.projects;
+      }
+    });
   const tags = [
-    ...data.projects
+    ...(() => data.projects
       .flatMap(x => x.tags)
       .reduce((set, tag) => {
         set.add(tag);
         return set;
-      }, new Set)
+      }, new Set))()
     ].sort();
 
   function selectTag(e) {
     selectedTag = e.target.innerText;
-    filteredProjects = data.projects.filter(p => ~p.tags.indexOf(selectedTag));
     return false;
   }
 
   function clearTag() {
     selectedTag = null;
-    filteredProjects = data.projects;
     return false;
   }
 </script>
@@ -107,20 +113,20 @@
   {#if selectedTag}
     <div class="tags tag-container">
       Filtering by:
-      <span on:click={clearTag} on:keypress={clearTag}>{selectedTag}<span>x</span></span>
+      <span onclick={clearTag} onkeypress={clearTag}>{selectedTag}<span>x</span></span>
     </div>
   {:else}
     <div class="tag-container" style="display: flex">
       <div style="flex: 0 1 auto">Filter:&nbsp;</div>
       <div class="tags" style="flex: 1">
         {#each tags as tag}
-          <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
+          <span onclick={selectTag} onkeypress={selectTag}>{tag}</span>{' '}
         {/each}
       </div>
     </div>
   {/if}
   <ul>
-    {#each filteredProjects as proj}
+    {#each filteredProjects() as proj}
       <li>
         <details>
           <summary>
@@ -139,7 +145,7 @@
           </summary>
           <div class="tags">
             {#each proj.tags.sort() as tag}
-              <span on:click={selectTag} on:keypress={selectTag}>{tag}</span>{' '}
+              <span onclick={selectTag} onkeypress={selectTag}>{tag}</span>{' '}
             {/each}
           </div>
           {proj.description}
