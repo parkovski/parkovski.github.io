@@ -74,3 +74,11 @@ p {
 p:last-child {
   margin-bottom: 0;
 }
+
+pre > code {
+  margin-left: 4ex;
+}
+
+article > h2 {
+  margin-top: 2em;
+}

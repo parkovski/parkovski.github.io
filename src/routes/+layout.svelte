@@ -1,7 +1,9 @@
 <script>
-  import '$lib/styles/global.css';
-  import Header from '$lib/cx/Header.svelte';
-  import Footer from '$lib/cx/Footer.svelte';
+  import '#lib/styles/global.css';
+  import Header from '#lib/cx/Header.svelte';
+  import Footer from '#lib/cx/Footer.svelte';
+  /** @type {{children?: import('svelte').Snippet}} */
+  let { children } = $props();
 
   function closeMenu() {
     document.getElementsByTagName('header')[0].style.display = 'none';
@@ -34,7 +36,7 @@
 <div id="page">
   <Header/>
   <main>
-    <slot/>
+    {@render children?.()}
   </main>
   <Footer/>
 </div>
