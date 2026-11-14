@@ -9,6 +9,6 @@
 <Title>Writing</Title>
 <div id="wrap-body">
   <p>
-    <a href="/writing/shell">Aw yeah dawg check out this jiggity shiznit.</a>
+    <a href="/writing/shell">Some Shell Utilities</a>
   </p>
 </div>
