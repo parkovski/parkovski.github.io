@@ -24,6 +24,9 @@ const projects: ProjectInfo[] = [
         url: 'https://www.tusong.band',
       }
     ],
+    images: [
+      '/src/lib/assets/tusong-light.webp'
+    ]
   },
   {
     name: 'Unaccessible Film Website',
@@ -36,6 +39,9 @@ const projects: ProjectInfo[] = [
         url: 'https://www.unaccessiblefilm.com',
       }
     ],
+    images: [
+      '/src/lib/assets/unaccessible.webp'
+    ]
   },
   {
     name: 'YinYang',
