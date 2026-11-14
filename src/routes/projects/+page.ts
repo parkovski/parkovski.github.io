@@ -12,6 +12,9 @@ interface ProjectInfo {
   links?: Link[];
 }
 
+import tusongImage from '#lib/assets/tusong-light.webp';
+import unaccessibleImage from '#lib/assets/unaccessible.webp';
+
 const projects: ProjectInfo[] = [
   {
     name: 'Tu Song Website',
@@ -25,7 +28,7 @@ const projects: ProjectInfo[] = [
       }
     ],
     images: [
-      '/src/lib/assets/tusong-light.webp'
+      tusongImage
     ]
   },
   {
@@ -40,7 +43,7 @@ const projects: ProjectInfo[] = [
       }
     ],
     images: [
-      '/src/lib/assets/unaccessible.webp'
+      unaccessibleImage
     ]
   },
   {
